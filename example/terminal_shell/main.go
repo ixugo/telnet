@@ -1,8 +1,12 @@
-# telnet
-telnet 客户端
+package main
 
-## How to use?
-```go
+import (
+	"os"
+	"time"
+
+	"github.com/ixugo/telnet"
+)
+
 func main() {
 	s, err := telnet.Dial("tcp", "192.168.1.2:23", telnet.Config{Timeout: 3 * time.Second})
 	if err != nil {
@@ -17,4 +21,3 @@ func main() {
 		panic(err)
 	}
 }
-```
